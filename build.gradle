@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '2.0.1'
+}
+
+mainClassName = 'de.itsfabidev.bot.Main'
+
+group 'de.itsfabidev'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+
+    maven { url 'https://jitpack.io'}
+}
+
+dependencies {
+    compile 'net.dv8tion:JDA:3.7.1_419'
+    compile 'com.sedmelluq:lavaplayer:1.3.17'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '0.9.26'
+    implementation group: 'me.duncte123', name: 'botCommons', version: '1.0.25'
+}
+
+compileJava.options.encoding = 'UTF-8'
+
